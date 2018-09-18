@@ -1,0 +1,12 @@
+ <div class="card bg-light mb-3 col-sm-5 col-md-4 col-lg-4" style="width: 18rem;">
+	<img src="{{media_root}}{{instance.image.url}}/"alt="Card image cap" class="rounded mx-auto d-block" >
+	<div class="card-body">
+		<p class="lead" ><b>Name: </b> {{instance.book_name|lower}}
+		<p class="lead" > <b>Branch: </b>{{instance.branch}}</p>
+		<p class="lead" ><b>Sem: </b>{{instance.sem}}</p>
+		<p class="lead" ><b><i class="fas fa-rupee-sign"></i>: </b> {{instance.price}}</p>
+		<div class='text-center'>
+			<a href="{% url 'books:detail' id=instance.id %}" class="btn btn-secondary btn-lg btn-dark">Buy</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block content %}
+	{% if inform %}
+	<h4 class="text-center"> <b>{{inform}}</b></h4>
+	{% endif %}
+	<div class="container-fluid">
+		<div class="row">
+			{% for obj  in object_list %}
+				{% include 'card.html' with instance=obj %}
+
+			{% endfor %}
+		</div>
+	</div>
+	
+{% endblock %}
+<!--  {% for obj in object_list %}
+        <div class='col my-3'>
+        {% include 'products/snippets/card.html' with instance=obj %}  
+        
+        </div>
+    {% endfor %} -->

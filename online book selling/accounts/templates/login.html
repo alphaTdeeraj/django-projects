@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% block content %}
+<form method="POST" action=".">{% csrf_token %}
+		<div class="container">
+			{% if fail %}
+				<h3 class="text-center"><b>Incorrect email or password </b></h3>
+			{% else %}
+				<h3 class="text-center">login</h3>
+			{% endif %}
+		<div class="row">
+			<div class="col-4 mx-auto">
+				{{form|crispy}}
+				<input  class="btn btn-primary" type="submit" placeholder="Submit">
+			</div>
+		</div>
+	</div>
+</form>
+	
+{% endblock %}
